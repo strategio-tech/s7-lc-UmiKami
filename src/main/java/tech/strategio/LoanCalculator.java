@@ -5,15 +5,18 @@ import java.util.Scanner;
 public class LoanCalculator {
 
     /**
-     * TODO: finish out this JavaDoc comment block.
-     * FIXME: WHAT DOES THIS METHOD DO?
-     * 
-     * @param ???
-     * @return ???
+     * @param amount the amount of money borrowed
+     * @return remaining amount to pay off after 3 months
      */
     static int getRemainingAmountIn3Months(int amount) {
         // TODO: Rewrite this method
-        return -1;
+        int remaining = amount;
+
+        for (int i = 0; i < 3; i++){
+            remaining -= remaining * 0.1;
+        }
+
+        return remaining;
     }
 
     public static void main(String[] args) {
